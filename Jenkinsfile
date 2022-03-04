@@ -7,7 +7,7 @@ pipeline {
             }
             steps {
                 pwsh("""
-                python subprocess_run.py
+                python update_nodes.py
                 """)
             }
         }
@@ -17,7 +17,7 @@ pipeline {
             }
             steps {
                 pwsh("""
-                python subprocess_run.py
+                python update_nodes.py
                 """)
             }
         }
@@ -27,7 +27,7 @@ pipeline {
             }
             steps {
                 sh"""
-                python3 subprocess_run.py                
+                python3 update_nodes.py                
                 """
             }
         }
@@ -37,7 +37,7 @@ pipeline {
             }
             steps {
                 sh"""
-                python subprocess_run.py
+                python update_nodes.py
                 """
             }
         }
