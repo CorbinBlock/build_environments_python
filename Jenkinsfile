@@ -7,7 +7,7 @@ pipeline {
             }
             steps {
                 pwsh("""
-                python3 subprocess_run.py
+                python subprocess_run.py
                 """)
             }
         }
@@ -17,7 +17,7 @@ pipeline {
             }
             steps {
                 pwsh("""
-                python3 subprocess_run.py
+                python subprocess_run.py
                 """)
             }
         }
@@ -37,7 +37,7 @@ pipeline {
             }
             steps {
                 sh"""
-                python3 subprocess_run.py
+                python subprocess_run.py
                 """
             }
         }
