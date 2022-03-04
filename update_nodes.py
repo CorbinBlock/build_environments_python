@@ -6,12 +6,14 @@ hostname
 """
 
 debian_command = """
+hostname
 apt-get update && apt-get upgrade -y
 apt-get install vim git git-lfs python3 python3-pip python3-venv openjdk-11-jdk curl -y
 cd /git/python && git pull --no-rebase
 """
 
 fedora_command = """
+hostname
 dnf upgrade -y
 cd /git/python && git pull --no-rebase
 """
