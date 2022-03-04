@@ -24,7 +24,7 @@ shell = "/bin/bash"
 wsl_command = 'bash -c "apt-get update && apt-get upgrade -y && apt-get install vim git git-lfs python3 python3-pip python3-venv openjdk-11-jdk curl -y && cd /git/python && git pull --no-rebase"'
 
 # wsl_command_ssh = 'ssh root@172.31.23.178 "cd /git/python/os; python3 update_nodes.py; exit"'
-wsl_command_ssh = 'plink.exe -i $env:userprofile/.ssh/id_rsa.ppk $env:WSL "apt-get update && apt-get upgrade -y && apt-get install vim git git-lfs python3 python3-pip python3-venv openjdk-11-jdk curl -y && cd /git/python && git pull --no-rebase"'
+# wsl_command_ssh = 'plink.exe -i $env:userprofile/.ssh/id_rsa.ppk $env:WSL "apt-get update && apt-get upgrade -y && apt-get install vim git git-lfs python3 python3-pip python3-venv openjdk-11-jdk curl -y && cd /git/python && git pull --no-rebase"'
 
 
 
@@ -52,7 +52,7 @@ elif platform == "win32":
         print(f"{debian_command}")
         print(subprocess.run("wsl -u root"))
     elif "WIN-02-ASUS" in output_string:
-        print(subprocess.run([powershell, option, wsl_command_ssh]))
+        print(subprocess.run([powershell, option, wsl_command]))
         # print(subprocess.run(wsl_command_ssh))
     elif "CBLOCKDYFX2X2" in output_string:
         print(subprocess.run(wsl_command))
