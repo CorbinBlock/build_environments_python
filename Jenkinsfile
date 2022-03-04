@@ -7,7 +7,6 @@ pipeline {
             }
             steps {
                 pwsh("""
-                cd python/os
                 python3 subprocess_run.py
                 """)
             }
@@ -18,7 +17,6 @@ pipeline {
             }
             steps {
                 pwsh("""
-                cd python/os
                 python3 subprocess_run.py
                 """)
             }
@@ -29,9 +27,7 @@ pipeline {
             }
             steps {
                 sh"""
-                cd python/os
-                python3 subprocess_run.py
-                
+                python3 subprocess_run.py                
                 """
             }
         }
@@ -41,7 +37,6 @@ pipeline {
             }
             steps {
                 sh"""
-                cd python/os
                 python3 subprocess_run.py
                 """
             }
